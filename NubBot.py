@@ -202,7 +202,7 @@ async def on_message(message):
 
 
 
-    if '[mid]' in lowered_message and message.author.id != "439432635735998475":
+  #  if '[mid]' in lowered_message and message.author.id != "439432635735998475":
         li = lowered_message.split()
         for i in range(len(li)):
             if "[mid]" in li[i]:
