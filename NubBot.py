@@ -8,6 +8,11 @@ from discord.ext.commands import Bot
 from discord import *
 import time
 
+
+# Bot Prefix
+
+BOT_PREFIX = ("?")
+
 # Bot "client" as Bot Object
 
 client = Bot(command_prefix=BOT_PREFIX)
@@ -195,6 +200,10 @@ async def list_servers():
         for server in client.servers:
             print(server.name)
         await asyncio.sleep(600)
+# Token
+
+TOKEN = "NDM5NDMyNjM1NzM1OTk4NDc1.DcTFEA.Xqd1Z3RtUjeRc8tXuVWhml7O1ws" 
+
 
 # Run Bot
 
