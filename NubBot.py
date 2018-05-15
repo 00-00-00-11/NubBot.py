@@ -141,7 +141,11 @@ async def on_message(message):
 
 
     if lowered_message == 'hoo' and message.author.id == "360854725744263169":
-        await client.send_message(message.channel, ':owl:')
+        imageURL = ["https://media.discordapp.net/attachments/420521281645969408/446001002521559041/owls-moving-their-heads.gif","https://media.discordapp.net/attachments/420521281645969408/446001333061943306/tenor.gif?width=346&height=300","https://media.discordapp.net/attachments/420521281645969408/446001509235294208/tumblr_m5s1w4rLz71r4zr2vo1_500.gif?width=400&height=216","https://media.discordapp.net/attachments/420521281645969408/446001692765454336/de4c41d5524d2594349011a49f3e859f.gif"]#"hooimages"]
+        embed = Embed()
+        embed.set_image(url = random.choice(imageURL))
+        await client.send_message(message.channel, 'Hoo?')
+        await client.send_message(message.channel, embed = embed)
 
 
     if (lowered_message == 'boo' or lowered_message == "boo!") and message.author.id == "391086228457521153":
