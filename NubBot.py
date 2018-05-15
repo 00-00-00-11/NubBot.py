@@ -9,8 +9,7 @@ from discord import *
 import time
 
 # Bot "client" as Bot Object
-BOT_PREFIX = ("?")
-TOKEN = "NDM5NDMyNjM1NzM1OTk4NDc1.DcTFEA.Xqd1Z3RtUjeRc8tXuVWhml7O1ws"
+
 client = Bot(command_prefix=BOT_PREFIX)
 
 # Function to check for ID
