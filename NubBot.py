@@ -9,6 +9,7 @@ from discord import *
 import time
 
 # Bot "client" as Bot Object
+BOT_PREFIX = ("?")
 client = Bot(command_prefix=BOT_PREFIX)
 
 # Function to check for ID
