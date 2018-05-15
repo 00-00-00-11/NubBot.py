@@ -109,41 +109,6 @@ async def invite(ctx, maxuses = 3):
         await client.send_message(ctx.message.channel, inviteLinq)
         await client.send_message(ctx.message.channel, "\nThe Invite link can be used maximum ``" + str(maxuses) + "`` time(s). You can use ``?invite <max_uses>`` to create a new invite link. Default 3.")
 
-
-# addnub Command (adds Nubs to a text filed names "nub.txt")
-
-#@client.command(description = "Add a user to the list of nubs", brief = "Add to nub list", pass_context = True)
-#async def addnub(ctx, username):
-#        temp = username.lstrip("<@")
-#        user_id = temp.rstrip(">")
-#        username = check_for_id(username)
-#        if username.startswith("<@") == False:
-#            await client.send_message(ctx.message.channel, "Please tag a user to add them to nub list.")
-#        elif str(ctx.message.author.id) == user_id:
-#            await client.send_message(ctx.message.channel, "Wonderful. I have never seen a nub you :joy:")
-#        else: 
-#            file_ = open("nub.txt", "r+")
-#            if username in file_.read():
-#                await client.send_message(ctx.message.channel, username + " is already in the list of nubs.")
-#            elif username not in file_.read():
-#                file_.write(username + " ")
-#                print(file_.read())
-#                await client.send_message(ctx.message.channel, username + " has been added to the list of nubs. Good Job :thumbsup:")
-
-
-# nublist Command
-
-#@client.command(description = "Shows list of nubs", brief = "Nubs list", pass_context = True)
-#async def nublist(ctx):
-#    file_  = open("nub.txt", "r+")
-#    list_ = file_.read().split()
-#    mssg = ""
-#    if len(list_)== 0:
-#        await client.send_message(ctx.message.channel, "The list is currently empty")
-#    else:
-#        for i in list_:
-#            mssg += i+"\n"
-#        await client.send_message(ctx.message.channel, "List of nubs:\n\n" + mssg)
             
 
 #--------------------------- End of Commands
@@ -202,7 +167,7 @@ async def on_message(message):
 
 
 
-  #  if '[mid]' in lowered_message and message.author.id != "439432635735998475":
+    if '[mid]' in lowered_message and message.author.id != "439432635735998475":
         li = lowered_message.split()
         for i in range(len(li)):
             if "[mid]" in li[i]:
