@@ -72,7 +72,7 @@ async def clear(ctx, number):
            mgs.append(x)
         await client.delete_messages(mgs)
         mssg = await client.send_message(ctx.message.channel, "Deleted %s messages :smiley:" % number)
-        await asyncio.sleep(3)
+        await asyncio.sleep(1.5)
         await client.delete_message(mssg)
     else: 
         mssg = "You do not have permission to clear messages."
