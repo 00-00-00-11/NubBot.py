@@ -149,7 +149,7 @@ async def on_message(message):
 
 
     if (lowered_message == 'meow') and message.author.id == "400442895087173643":
-        imageURL = ['''Images here''']
+        imageURL = ["https://media.discordapp.net/attachments/402165631363055618/445924453730484235/image.jpg?width=400&height=225","https://media.discordapp.net/attachments/402165631363055618/445924486714228757/image.jpg?width=400&height=225","https://media.discordapp.net/attachments/402165631363055618/445924536626577409/image.gif"]
         embed = Embed()
         embed.set_image(url=random.choice(imageURL))
         await client.send_message(message.channel, 'Meow.')
