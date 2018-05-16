@@ -49,7 +49,7 @@ def get_link(entered_text):
         if i == " ":
             return_link+= "-"
         else:
-            return_link.+=i
+            return_link +=i
     return return_link
 
 
@@ -137,7 +137,7 @@ async def strategy(context):
     strategy_link = "https://www.smogon.com/dex/sm/pokemon/"+get_link
     mssg = "Strategy: " + strategy_link
     embed = Embed()
-    embed.set_image(url = imageURL))
+    embed.set_image(url = imageURL)
     await client.send_message(message.channel, embed = embed)
     await client.send_message(message.channel, mssg)        
 
