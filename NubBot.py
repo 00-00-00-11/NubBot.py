@@ -132,9 +132,9 @@ async def invite(ctx, maxuses = 3):
                 description="Sends the image of Pokemon with their best strategy to use",
                 brief="Pokemon data and strategy",
                 pass_context=True)
-async def strategy(context):
-    imageURL = "https://img.pokemondb.net/artwork/"+ get_link(context.message) + ".jpg"
-    strategy_link = "https://www.smogon.com/dex/sm/pokemon/"+get_link
+async def strategy(context, pokemon):
+    imageURL = "https://img.pokemondb.net/artwork/"+ get_link(pokemon) + ".jpg"
+    strategy_link = "https://www.smogon.com/dex/sm/pokemon/"+get_link(pokemon)
     mssg = "Strategy: " + strategy_link
     embed = Embed()
     embed.set_image(url = imageURL)
