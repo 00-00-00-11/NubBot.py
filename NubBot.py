@@ -138,8 +138,8 @@ async def strategy(context, pokemon):
     mssg = "Strategy: " + strategy_link
     embed = Embed()
     embed.set_image(url = imageURL)
-    await client.send_message(message.channel, embed = embed)
-    await client.send_message(message.channel, mssg)        
+    await client.send_message(context.message.channel, embed = embed)
+    await client.send_message(context.message.channel, mssg)        
 
 
 
