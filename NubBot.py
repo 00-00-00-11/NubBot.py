@@ -137,7 +137,7 @@ async def strategy(context):
     strategy_link = "https://www.smogon.com/dex/sm/pokemon/"+get_link
     mssg = "Strategy: " + strategy_link
     embed = Embed()
-    embed.set_image(url = "https://img.pokemondb.net/artwork/"+ get_link(context.message) + ".jpg"))
+    embed.set_image(url = imageURL))
     await client.send_message(message.channel, embed = embed)
     await client.send_message(message.channel, mssg)        
 
