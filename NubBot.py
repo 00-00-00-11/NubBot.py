@@ -40,7 +40,17 @@ def check_for_id(name):
                 break
     return final_name
 
+# Function to get link
 
+def get_link(entered_text):
+    lowered_text = entered_text.lower()
+    return_link = ""
+    for i in lowered_text:
+        if i == " ":
+            return_link+= "-"
+        else:
+            return_link.+=i
+    return return_link
 
 
 # Commands list: 8ball, clear, ptype, hello (and help default)
@@ -115,7 +125,23 @@ async def invite(ctx, maxuses = 3):
         await client.send_message(ctx.message.channel, inviteLinq)
         await client.send_message(ctx.message.channel, "\nThe Invite link can be used maximum ``" + str(maxuses) + "`` time(s). You can use ``?invite <max_uses>`` to create a new invite link. Default 3.")
 
-            
+ 
+# pokemon Command
+
+@client.command(name='strategy',
+                description="Sends the image of Pokemon with their best strategy to use",
+                brief="Pokemon data and strategy",
+                pass_context=True)
+async def strategy(context):
+    imageURL = "https://img.pokemondb.net/artwork/"+ get_link(context.message) + ".jpg"
+    strategy_link = "https://www.smogon.com/dex/sm/pokemon/"+get_link
+    mssg = "Strategy: " + strategy_link
+    embed = Embed()
+    embed.set_image(url = "https://img.pokemondb.net/artwork/"+ get_link(context.message) + ".jpg"))
+    await client.send_message(message.channel, embed = embed)
+    await client.send_message(message.channel, mssg)        
+
+
 
 #--------------------------- End of Commands
 
