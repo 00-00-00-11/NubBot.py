@@ -181,11 +181,11 @@ async def on_message(message):
         await client.send_message(message.channel, 'BOO!!')
         await client.send_message(message.channel, embed = embed)
 
-    if (lowered_message == 'bleh') : #and message.author.id == "391086228457521153":
+    if (lowered_message == 'bleh') and message.author.id == "391086228457521153":
         imageURL = ["https://images-ext-1.discordapp.net/external/LVj84zA8BFKDHu6h6A1jQ5Y8CVcySt5SzNoLbsMyZkA/https/cdn.discordapp.com/attachments/396733003834851358/447460536787927040/hug-S1UJ_Jncf.gif","https://images-ext-1.discordapp.net/external/PyIQYB5FsXbRJfd3I6qmNTgAqKsxOMtgK1qQNIULtUw/%3Ffit%3D780%252C330%26ssl%3D1/https/i0.wp.com/mindoverblown.com/wp-content/uploads/2017/07/Anime-characters-perfect-in-a-different-show-feat.jpg?width=400&height=170","https://pa1.narvii.com/6523/8c453e4cb3df1bbe545c177323ede4e4156dfadd_hq.gif","https://78.media.tumblr.com/6dac8a095c475639b589cbe7fd583eaa/tumblr_ot5y5r3B391w7cvmoo1_500.gif","https://78.media.tumblr.com/68b1b25484ea9646062c7b4f587b6344/tumblr_p33p2ksSrd1wn2b96o1_500.gif","https://images-ext-1.discordapp.net/external/ZmbO-vBxnxxExaUqbsn7ByIp9ENlRJv7Ff9fGq9S-GY/https/steamusercontent-a.akamaihd.net/ugc/156899501292204029/EDAC908524C0B27D938F5C57844AD009830CDE72/"]#""]
         embed = Embed()
         embed.set_image(url=random.choice(imageURL))
-        await client.send_message(message.channel, 'BOO!!')
+        await client.send_message(message.channel, 'blehh..')
         await client.send_message(message.channel, embed = embed)
         
         
