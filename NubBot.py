@@ -200,6 +200,15 @@ async def on_message(message):
 
 
 
+
+    if (lowered_message == "howl") and message.author.id == "439988331871338497":
+        imageURL = ["https://media.discordapp.net/attachments/464042876502802432/468523117363462160/Cute-Wolf-cute-wolf-zone-16877321-641-479.jpg?width=400&height=299","https://media.discordapp.net/attachments/464042876502802432/468523117363462164/images_4.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523117854064640/images_5.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523117854064641/e5f9a899ce639ded114d0bb84be7c3c0-wolf-puppies-baby-wolves.jpg?width=398&height=301","https://media.discordapp.net/attachments/464042876502802432/468523118378614794/images_1.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523118378614795/images_3.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523118378614796/Running-wolf-1920x1200.jpg?width=400&height=250","https://media.discordapp.net/attachments/464042876502802432/468523119171207178/images_2.jpeg"]
+        embed = Embed()
+        embed.set_image(url=random.choice(imageURL))
+        await client.send_message(message.channel, 'Howll!!')
+        await client.send_message(message.channel, embed = embed)        
+
+
     if lowered_message == 'test' and message.author.id != "439432635735998475":
         msg = "Pass :smiley: {}".format(message.author.mention)
         await client.send_message(message.channel, msg)
