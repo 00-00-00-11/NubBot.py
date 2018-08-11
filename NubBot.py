@@ -181,14 +181,13 @@ async def on_message(message):
         await client.send_message(message.channel, 'BOO!!')
         await client.send_message(message.channel, embed = embed)
 
+        
     if (lowered_message == 'bleh') and message.author.id == "391086228457521153":
         imageURL = ["https://images-ext-1.discordapp.net/external/LVj84zA8BFKDHu6h6A1jQ5Y8CVcySt5SzNoLbsMyZkA/https/cdn.discordapp.com/attachments/396733003834851358/447460536787927040/hug-S1UJ_Jncf.gif","https://images-ext-1.discordapp.net/external/PyIQYB5FsXbRJfd3I6qmNTgAqKsxOMtgK1qQNIULtUw/%3Ffit%3D780%252C330%26ssl%3D1/https/i0.wp.com/mindoverblown.com/wp-content/uploads/2017/07/Anime-characters-perfect-in-a-different-show-feat.jpg?width=400&height=170","https://pa1.narvii.com/6523/8c453e4cb3df1bbe545c177323ede4e4156dfadd_hq.gif","https://78.media.tumblr.com/6dac8a095c475639b589cbe7fd583eaa/tumblr_ot5y5r3B391w7cvmoo1_500.gif","https://78.media.tumblr.com/68b1b25484ea9646062c7b4f587b6344/tumblr_p33p2ksSrd1wn2b96o1_500.gif","https://images-ext-1.discordapp.net/external/ZmbO-vBxnxxExaUqbsn7ByIp9ENlRJv7Ff9fGq9S-GY/https/steamusercontent-a.akamaihd.net/ugc/156899501292204029/EDAC908524C0B27D938F5C57844AD009830CDE72/"]#""]
         embed = Embed()
         embed.set_image(url=random.choice(imageURL))
         await client.send_message(message.channel, 'blehh..')
         await client.send_message(message.channel, embed = embed)
-        
-        
         
         
     if (lowered_message == 'meow') and message.author.id == "400442895087173643":
@@ -198,9 +197,15 @@ async def on_message(message):
         await client.send_message(message.channel, 'Meow.')
         await client.send_message(message.channel, embed = embed)
 
+        
+    if (lowered_message == 'requip') and message.author.id == "400442895087173643":
+        imageURL = ["https://media.discordapp.net/attachments/402165631363055618/477772573493690368/image.jpg?width=275&height=410","https://media.discordapp.net/attachments/402165631363055618/477772610071953438/image.jpg?width=440&height=410", "https://media.discordapp.net/attachments/402165631363055618/477772669249388544/image.png?width=316&height=301","https://media.discordapp.net/attachments/402165631363055618/477772704527810560/image.png?width=283&height=300","https://media.discordapp.net/attachments/402165631363055618/477772738313060353/image.png?width=226&height=300","https://media.discordapp.net/attachments/402165631363055618/477772782470430721/image.jpg?width=253&height=300","https://media.discordapp.net/attachments/402165631363055618/477772825042878465/image.jpg?width=259&height=300","https://media.discordapp.net/attachments/402165631363055618/477772865933017089/image.jpg?width=333&height=300","https://media.discordapp.net/attachments/402165631363055618/477772903698399233/image.jpg?width=355&height=411","https://media.discordapp.net/attachments/402165631363055618/477772944752246784/image.png?width=273&height=300","https://media.discordapp.net/attachments/402165631363055618/477772976754917386/image.png?width=362&height=410","https://media.discordapp.net/attachments/402165631363055618/477773003455725568/image.jpg?width=291&height=301","https://media.discordapp.net/attachments/402165631363055618/477773042593038336/image.jpg?width=276&height=410","https://media.discordapp.net/attachments/402165631363055618/477773066899030026/image.png?width=312&height=411","https://media.discordapp.net/attachments/402165631363055618/477773094522716161/image.png?width=350&height=301","https://media.discordapp.net/attachments/402165631363055618/477773118497357836/image.jpg?width=347&height=410","https://media.discordapp.net/attachments/402165631363055618/477773157734940672/image.jpg?width=400&height=246","https://media.discordapp.net/attachments/402165631363055618/477773187292332055/image.png?width=400&height=221","https://media.discordapp.net/attachments/402165631363055618/477773268216971265/image.jpg","https://media.discordapp.net/attachments/402165631363055618/477773297656791051/image.jpg?width=400&height=225","https://media.discordapp.net/attachments/402165631363055618/477773319567966208/image.jpg","https://media.discordapp.net/attachments/402165631363055618/477773337859457025/image.jpg?width=400&height=238","https://media.discordapp.net/attachments/402165631363055618/477773357350256640/image.png?width=375&height=410","https://media.discordapp.net/attachments/402165631363055618/477773369526321152/image.png?width=300&height=300","https://media.discordapp.net/attachments/402165631363055618/477773403479343104/image.jpg?width=287&height=410","https://media.discordapp.net/attachments/402165631363055618/477773671323271175/image.jpg?width=300&height=300"]
+        embed = Embed()
+        embed.set_image(url=random.choice(imageURL))
+        await client.send_message(message.channel, 'Requip!')
+        await client.send_message(message.channel, embed = embed)
 
-
-
+        
     if (lowered_message == "howl") and message.author.id == "439988331871338497":
         imageURL = ["https://media.discordapp.net/attachments/464042876502802432/468523117363462160/Cute-Wolf-cute-wolf-zone-16877321-641-479.jpg?width=400&height=299","https://media.discordapp.net/attachments/464042876502802432/468523117363462164/images_4.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523117854064640/images_5.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523117854064641/e5f9a899ce639ded114d0bb84be7c3c0-wolf-puppies-baby-wolves.jpg?width=398&height=301","https://media.discordapp.net/attachments/464042876502802432/468523118378614794/images_1.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523118378614795/images_3.jpeg","https://media.discordapp.net/attachments/464042876502802432/468523118378614796/Running-wolf-1920x1200.jpg?width=400&height=250","https://media.discordapp.net/attachments/464042876502802432/468523119171207178/images_2.jpeg"]
         embed = Embed()
