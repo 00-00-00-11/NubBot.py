@@ -7,7 +7,6 @@ from discord import Game, Status
 from discord.ext.commands import Bot
 from discord import *
 import time
-import config
 
 
 # Bot Prefix
