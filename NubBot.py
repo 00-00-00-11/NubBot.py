@@ -12,11 +12,11 @@ import config
 
 # Bot Prefix
 
-BOT_PREFIX = ("?")
+#BOT_PREFIX = ("?")
 
 # Bot "client" as Bot Object
 
-client = Bot(command_prefix=BOT_PREFIX)
+client = Bot(command_prefix=PREFIX)
 
 # Function to check for ID
 
@@ -260,4 +260,4 @@ async def list_servers():
 # Run Bot
 
 client.loop.create_task(list_servers())
-client.run(config.token)
+client.run(TOKEN)
