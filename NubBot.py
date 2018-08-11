@@ -7,11 +7,13 @@ from discord import Game, Status
 from discord.ext.commands import Bot
 from discord import *
 import time
+import os
 
+TOKEN = os.environ("TOKEN")
 
 # Bot Prefix
 
-#BOT_PREFIX = ("?")
+BOT_PREFIX = ("?")
 
 # Bot "client" as Bot Object
 
