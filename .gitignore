@@ -1,4 +1,3 @@
 __pycache__/
-config.py[cod]
-config.py
-*.log
+*.py[cod]
+*$py.class
