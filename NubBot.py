@@ -11,7 +11,7 @@ import os
 
 #Bot Token
 
-TOKEN = (os.environ.get('TOKEN'))
+B_TOKEN = (os.environ.get('TOKEN'))
 
 # Bot Prefix
 
@@ -263,4 +263,4 @@ async def list_servers():
 # Run Bot
 
 client.loop.create_task(list_servers())
-client.run(TOKEN)
+client.run(B_TOKEN)
