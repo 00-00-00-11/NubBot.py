@@ -108,11 +108,11 @@ async def ptype(ctx):
 
 @client.command(pass_context=True)
 async def ping(ctx):
-    before = int(round(time.time() * 1000))
+    before = int(round(time.clock() * 1000))
     message = await client.send_message(ctx.message.channel,"Pong!")
-    after = int(round(time.time() * 1000))
+    after = int(round(time.clock() * 1000))
     ping = (after - before) * 1000
-    await client.edit_message(message, "Pong!  `{int(ping)}ms`")
+    await client.edit_message(message, "Pong!  `"+str(ping)+ "ms`")
 
 
 # hello Command
