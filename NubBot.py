@@ -12,7 +12,7 @@ from boto import *
 
 #Bot Token
 
-TOKEN = S3Connection(os.environ["TOKEN"])
+b_TOKEN = S3Connection(os.environ["TOKEN"])
 
 # Bot Prefix
 
@@ -264,4 +264,4 @@ async def list_servers():
 # Run Bot
 
 client.loop.create_task(list_servers())
-client.run(TOKEN)
+client.run(b_TOKEN)
