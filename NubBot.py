@@ -106,9 +106,14 @@ async def ptype(ctx):
 
 # ping Command
 
-@client.command()
+@client.command(pass_context=True)
 async def ping(ctx):
-    await ctx.send_message('Pong! {0}'.format(round(client.latency, 1)))
+	channel = ctx.message.channel
+	t1 = time.perf_counter()
+	await bot.send_typing(channel)
+	t2 = time.perf_counter()
+	embed=discord.Embed(title=None, description='Ping: {}'.format(round((t2-t1)*1000)), color=0x2874A6)
+	await bot.say(embed=embed)
 
 
 
