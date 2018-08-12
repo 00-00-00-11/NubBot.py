@@ -271,7 +271,7 @@ async def change_status():
     while not client.is_closed:
         current_status = next(sts)
         await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
-        await asyncio.sleep(1.5)
+        await asyncio.sleep(0.2)
 
 
 # List of servers bot is currently in. Updated every 10 mins
