@@ -108,7 +108,7 @@ async def ptype(ctx):
 
 @client.command(pass_context=True)
 async def ping(ctx):
-    before = int(round(time.time() * 1000)
+    before = int(round(time.time() * 1000))
     message = await ctx.send("Pong!")
     after = int(round(time.time() * 1000))
     ping = (after - before) * 1000
