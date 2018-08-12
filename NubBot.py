@@ -12,7 +12,7 @@ from itertools import cycle
 
 #Statuses
 
-statuses = ["online","idle","dnd"]
+statuses = ["online","dnd","idle"]
 
 #Bot Token
 
@@ -266,7 +266,7 @@ async def on_ready():
 
 async def change_status():
     await client.wait_until_ready()
-    sts = cycle(ststuses)
+    sts = cycle(statuses)
     
     while not client.is_closed:
         current_status = next(sts)
