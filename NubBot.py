@@ -12,7 +12,7 @@ from itertools import cycle
 
 #Statuses
 
-statuses = ["online","dnd","idle"]
+statuses = ["online","do_not_disturb","idle"]
 
 #Bot Token
 
@@ -260,7 +260,7 @@ async def on_message(message):
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name="Pokemon Legends"), status=Status("idle"))
+    await client.change_presence(game=Game(name="Pokemon Legends"), status=Status("online"))
 
 # Magic
 
@@ -271,7 +271,7 @@ async def change_status():
     while not client.is_closed:
         current_status = next(sts)
         await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
-        await asyncio.sleep(4)
+        await asyncio.sleep(1.5)
 
 
 # List of servers bot is currently in. Updated every 10 mins
