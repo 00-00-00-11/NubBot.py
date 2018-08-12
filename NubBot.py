@@ -104,6 +104,14 @@ async def ptype(ctx):
     await client.send_typing(ctx.message.channel)
 
 
+# ping Command
+
+@client.command()
+async def ping(ctx):
+    await ctx.send('Pong! {0}'.format(round(client.latency, 1))
+
+
+
 # hello Command
 
 @client.command(name='hi',
