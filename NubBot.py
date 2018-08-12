@@ -19,7 +19,7 @@ BOT_PREFIX = ("?")
 
 # Bot "client" as Bot Object
 
-client = Bot(command_prefix=PREFIX)
+client = Bot(command_prefix=BOT_PREFIX)
 
 # Function to check for ID
 
