@@ -7,7 +7,6 @@ from discord import Game, Status
 from discord.ext.commands import Bot
 from discord import *
 import time
-import datetime
 import os
 
 #Bot Token
@@ -107,11 +106,15 @@ async def ptype(ctx):
 
 # ping Command
 
-@client.command(pass_context=True)
+@bot.command(pass_context=True)
 async def ping(ctx):
-    now = datetime.datetime.utcnow()
-    delta = now-ctx.message.timestamp
-    await client.say('{}ms'.format(delta(microseconds=1)))
+    """ Pong! """
+    await delete_message(ctx.message)
+    before = time.monotonic()
+    message = await ctx.send("Pong!")
+    ping = (time.monotonic() - before) * 1000
+    await message.edit(content=f"Pong!  `{int(ping)}ms`")
+  #  print(f'Ping {int(ping)}ms')
 
 
 
