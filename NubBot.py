@@ -263,7 +263,7 @@ async def on_message(message):
 
 #Statuses
 
-status = ["online","do_not_disturb","idle"]
+status = ["dnd","online","idle"]
 
 async def change_status():
     await client.wait_until_ready()
