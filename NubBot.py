@@ -257,17 +257,22 @@ async def on_message(message):
 
 @client.event
 async def on_ready():
-    counter = 0
-    while True:
-        counter+=1
-        cnt = counter%3
-        if cnt == 0:
-            await client.change_presence(game=Game(name="Pokemon Legends 1") , status = "idle")
-        if cnt == 1:
-            await client.change_presence(game=Game(name="Pokemon Legends 2") , status = "online")
-        if cnt == 2:
-            await client.change_presence(game=Game(name="Pokemon Legends 3") , status = "dnd")            
+    await client.change_presence(game=Game(name="Pokemon Legends"))
 
+# Magic
+
+#Statuses
+
+statuses = ["online","do_not_disturb","idle"]
+
+async def change_status():
+    await client.wait_until_ready()
+    sts = cycle(statuses)
+    while True:
+        current_status = next(sts)
+        await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
+        await asyncio.sleep(2)
+ 
 
 # List of servers bot is currently in. Updated every 10 mins
 
@@ -282,5 +287,5 @@ async def list_servers():
 # Run Bot
 
 client.loop.create_task(list_servers())
-#client.loop.create_task(change_status())
+client.loop.create_task(change_status())
 client.run(TOKEN)
