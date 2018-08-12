@@ -263,4 +263,4 @@ async def list_servers():
 # Run Bot
 
 client.loop.create_task(list_servers())
-client.run(b_TOKEN)
+client.run(TOKEN)
