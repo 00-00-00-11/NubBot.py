@@ -8,8 +8,11 @@ from discord.ext.commands import Bot
 from discord import *
 import time
 import os
+from boto import *
 
-TOKEN = os.environ("TOKEN")
+#Bot Token
+
+TOKEN = S3Connection(os.environ["TOKEN"])
 
 # Bot Prefix
 
