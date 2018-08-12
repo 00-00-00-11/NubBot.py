@@ -263,15 +263,15 @@ async def on_message(message):
 
 #Statuses
 
-status = ["dnd","online","idle"]
+status_ = ["dnd","online","idle"]
 
 async def change_status():
     await client.wait_until_ready()
-    msgs = cycle(status)
+    msgs = cycle(status_)
     
     while not client.is_closed:
         current_status = next(msgs)
-        await client.change_presence(game = Game(name = current_status))
+        await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
         await asyncio.sleep(2)
  
 
