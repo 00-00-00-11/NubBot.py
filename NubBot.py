@@ -108,7 +108,7 @@ async def ptype(ctx):
 
 @client.command()
 async def ping(ctx):
-    await ctx.send_message('Pong! {0}'.format(round(client.latency, 1))
+    await ctx.send_message('Pong! {0}'.format(round(client.latency, 1)))
 
 
 
