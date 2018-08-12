@@ -7,11 +7,11 @@ from discord import Game, Status
 from discord.ext.commands import Bot
 from discord import *
 import time
-from boto import *
+import os
 
 #Bot Token
 
-b_TOKEN = S3Connection(os.environ["TOKEN"])
+TOKEN = (os.environ.get('TOKEN')
 
 # Bot Prefix
 
