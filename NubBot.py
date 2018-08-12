@@ -12,7 +12,7 @@ from itertools import cycle
 
 #Statuses
 
-statuses = ["s1","s2","s3"]
+statuses = ["online","idle","dnd"]
 
 #Bot Token
 
