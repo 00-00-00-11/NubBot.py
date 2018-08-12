@@ -269,7 +269,7 @@ async def change_status():
     sts = cycle(ststuses)
     
     while not client.is_closed:
-        current_status = next(statuses)
+        current_status = next(sts)
         await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
         await asyncio.sleep(4)
 
@@ -284,9 +284,8 @@ async def list_servers():
             print(server.name)
         await asyncio.sleep(600)
         
-# Token - Boo
-
 # Run Bot
 
 client.loop.create_task(list_servers())
+client.loop.create_task(change_status())
 client.run(TOKEN)
