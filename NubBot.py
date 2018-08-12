@@ -8,6 +8,11 @@ from discord.ext.commands import Bot
 from discord import *
 import time
 import os
+from itertools import cycle
+
+#Statuses
+
+statuses = ["s1","s2","s3"]
 
 #Bot Token
 
@@ -256,7 +261,17 @@ async def on_message(message):
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name="Pokemon Legends"), status=Status("idle"))
-    print("Logged in as " + client.user.name)
+
+# Magic
+
+async def change_status():
+    await client.wait_until_ready()
+    sts = cycle(ststuses)
+    
+    while not client.is_closed:
+        current_status = next(statuses)
+        await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
+        await asyncio.sleep(4)
 
 
 # List of servers bot is currently in. Updated every 10 mins
