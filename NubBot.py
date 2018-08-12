@@ -8,7 +8,7 @@ from discord.ext.commands import Bot
 from discord import *
 import time
 import os
-from itertools import *
+from itertools import cycle
 
 
 #Bot Token
@@ -263,15 +263,16 @@ async def on_ready():
 
 #Statuses
 
-statuses = ["online","do_not_disturb","idle"]
+status = ["online","do_not_disturb","idle"]
 
 async def change_status():
     await client.wait_until_ready()
-    sts = cycle(statuses)
-    while True:
-        current_status = next(sts)
-        await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
-        await asyncio.sleep(2)
+    msgs = cycle(statuses)
+    
+    while not client.is_closed:
+        current_status = next(msgs)
+        await client.change_presence(game = Game(name = current_status))
+        await asyncio.sleep(5)
  
 
 # List of servers bot is currently in. Updated every 10 mins
