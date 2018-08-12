@@ -1,4 +1,4 @@
 discord
 asyncio
 aiohttp
-datetime
+itertools
