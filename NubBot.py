@@ -267,7 +267,7 @@ status = ["online","do_not_disturb","idle"]
 
 async def change_status():
     await client.wait_until_ready()
-    msgs = cycle(statuses)
+    msgs = cycle(status)
     
     while not client.is_closed:
         current_status = next(msgs)
