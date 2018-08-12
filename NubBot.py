@@ -108,11 +108,11 @@ async def ptype(ctx):
 
 @bot.command(pass_context=True)
 async def ping(ctx):
-    before = lambda: int(round(time.time() * 1000))
+    before = int(round(time.time() * 1000))
     message = await ctx.send_message("Pong!")
-    after = lambda: int(round(time.time() * 1000))
+    after = int(round(time.time() * 1000))
     ping = (after - before) * 1000
-    await message.edit(content="Pong!  "+str(ping)+"ms")
+    await ctx.send_message(content="Pong!  "+str(ping)+"ms")
 #    print(f'Ping {int(ping)}ms')
 
 
