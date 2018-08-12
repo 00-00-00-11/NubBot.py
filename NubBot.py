@@ -265,7 +265,7 @@ async def on_ready():
 # Magic
 
 async def change_status():
-    await client.wait_until_ready()
+   # await client.wait_until_ready()
     sts = cycle(statuses)
     
     while not client.is_closed:
