@@ -112,7 +112,7 @@ async def ping(ctx):
     message = await ctx.send("Pong!")
     after = lambda: int(round(time.time() * 1000))
     ping = (after - before) * 1000
-    await message.edit(content=f"Pong!  `{int(ping)}ms`")
+    await message.edit(content="Pong!  "+str(ping)+"ms")
 #    print(f'Ping {int(ping)}ms')
 
 
