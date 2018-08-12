@@ -11,7 +11,7 @@ import os
 
 #Bot Token
 
-TOKEN = (os.environ.get('TOKEN')
+TOKEN = (os.environ.get('TOKEN'))
 
 # Bot Prefix
 
