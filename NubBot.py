@@ -108,14 +108,11 @@ async def ptype(ctx):
 
 @bot.command(pass_context=True)
 async def ping(ctx):
-    try:
-        before =lambda: int(round(time.time() * 1000))
-        message = await ctx.send_message("Pong!")
-        after =lambda: int(round(time.time() * 1000))
-        ping = (after - before) * 1000
-        await client.send_message(ctx.message.channel, ping)
-    except:
-        await client.send_message(ctx.message.channel, "Boo")
+    before = int(round(time.time() * 1000))
+    await client.send_message(ctx.message.channel, "Pong!")
+    after = int(round(time.time() * 1000))
+    ping = (after - before) * 1000
+    await client.send_message(ctx.message.channel, str(ping))
 
 
 # hello Command
