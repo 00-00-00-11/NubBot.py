@@ -11,7 +11,7 @@ import os
 
 #Bot Token
 
-B_TOKEN = "NDM5NDMyNjM1NzM1OTk4NDc1.DlHLmA.-K5NsyPlFxCtGsNEA3ziz4OVbjg" #(os.environ.get('TOKEN'))
+B_TOKEN = (os.environ.get('TOKEN'))
 
 # Bot Prefix
 
