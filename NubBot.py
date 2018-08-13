@@ -167,8 +167,21 @@ async def strategy(context, pokemon):
 
 @client.command(brief="Shows server status", description= "Shows the number of users in the server", pass_context=True)
 async def serstatus(ctx):
-    x = "There are currently `"+str(len(ctx.message.server.members)) +"` users in the server. Do `?ping to get the server ping`"
+    x = "There are currently `"+str(len(ctx.message.server.members)) +"` users in the server. Do `?ping` to get the server ping."
     await client.send_message(ctx.message.channel, x)
+
+
+# avatar Command
+
+@client.command(brief= "Shows avatar", description = "Shows a given member's avatar (default is user)", pass_context= True)
+async def avatar(ctx, user= message.user.ID)
+    if user!="":
+        name = check_for_id(user)
+        url = name.avatar_url()
+        embed=Embed()
+        embed.set_image(url = url)
+        await client.send_message(ctx.message.channel, embed= embed)
+
 
 #--------------------------- End of Commands
 
