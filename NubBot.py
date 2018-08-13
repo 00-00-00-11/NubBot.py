@@ -180,7 +180,7 @@ async def serstatus(ctx):
 #    await ctx.send_message(ctx.message.channel, User.avatar_url())
 
 @client.command(pass_context=True)
-async def avatar(context, user)
+async def avatar(context, user):
     eTitle = "{0}'s Avatar".format(user)
     eDesc = "{0}'s rad avatar".format(user.display_name)
 
