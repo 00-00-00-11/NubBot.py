@@ -193,11 +193,11 @@ async def serstatus(ctx):
 
 #    await client.say(embed = em)
 
-@client.command(pass_context=True)
-async def avatar(ctx):
-    if (ctx.message.mentions.__len__()>0):
-        for user in ctx.message.mentions:
-            await client.say(user.avatar_url())
+#@client.command(pass_context=True)
+#async def avatar(ctx):
+#    if (ctx.message.mentions.__len__()>0):
+#        for user in ctx.message.mentions:
+#            await client.say(user.avatar_url)
 
 
 #--------------------------- End of Commands
@@ -289,6 +289,18 @@ async def on_message(message):
             if "[mid]" in li[i]:
                 addition = li[i][5:12]
             await client.send_message(channel, 'Pokemon:   ' + "https://www.pokemonlegends.com/monster.php?mid="+addition + "  :wink: ")
+
+
+    if lowered_message.content.startswith("?getavatar"):
+            if len(message.mentions) > 0:
+                for user in lowered_message.mentions:
+                    if user.avatar_url() != "":
+                        client.send_message(message.channel, "<@" + user.id + ">'s avatar is " + user.avatar_url())
+                    else:
+                        client.send_message(message.channel, user.name + " doesn't have an avatar.")
+            else:
+                client.send_message(message.channel, message.author.mention() + " You need to mention the users you want to get avatars from.")
+
 
     await client.process_commands(message)
 
