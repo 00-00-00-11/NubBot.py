@@ -275,7 +275,7 @@ async def change_status():
     
     while not client.is_closed:
         current_status = next(msgs)
-        await client.change_presence(game = Game(name = "Pokemon Legends in "+ str(len(client.servers))+ " servers"), status = current_status)
+        await client.change_presence(game = Game(name = "Pokemon Legends"), status = current_status)
         await asyncio.sleep(2)
  
 
