@@ -184,11 +184,11 @@ async def avatar(context, user)
     eTitle = "{0}'s Avatar".format(user)
     eDesc = "{0}'s rad avatar".format(user.display_name)
 
-    em = discord.Embed(
+    em = Embed(
         title = eTitle,
         description = eDesc,
         url = user.avatar_url,
-        colour = discord.Colour.green())
+        colour = Colour.green())
     # em.set_thumbnail(user.avatar_url)
 
     await client.say(embed = em)
