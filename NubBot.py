@@ -174,11 +174,11 @@ async def serstatus(ctx):
 # avatar Command
 
 @client.command(brief= "Shows avatar", description = "Shows a given member's avatar (default is user)", pass_context= True)
-async def avatar(ctx, target: User=None):
+async def avatar(ctx, User = None):
 
-        if target is None:
-            target = ctx.message.author
-        await ctx.send(target.avatar_url_as(format='png'))
+        if User is None:
+            User = ctx.message.author
+        await ctx.send_message(User.avatar_url())
 
 
 #--------------------------- End of Commands
