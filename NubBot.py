@@ -174,11 +174,11 @@ async def serstatus(ctx):
 # avatar Command
 
 @client.command(brief= "Shows avatar", description = "Shows a given member's avatar (default is user)", pass_context= True)
-async def avatar(ctx, user):
-        avt = User.user.avatar_url()
-        embed=Embed()
-        embed.set_image(url = avt)
-        await client.send_message(ctx.message.channel, embed= embed)
+async def avatar(self, ctx, target: discord.User=None):
+
+        if target is None:
+            target = ctx.message.author
+        await ctx.send(target.avatar_url_as(format='png'))
 
 
 #--------------------------- End of Commands
