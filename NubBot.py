@@ -174,7 +174,7 @@ async def serstatus(ctx):
 # avatar Command
 
 @client.command(brief= "Shows avatar", description = "Shows a given member's avatar (default is user)", pass_context= True)
-async def avatar(self, ctx, target: discord.User=None):
+async def avatar(self, ctx, target: User=None):
 
         if target is None:
             target = ctx.message.author
