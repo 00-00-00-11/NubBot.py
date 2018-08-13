@@ -167,7 +167,7 @@ async def strategy(context, pokemon):
 
 @client.command(brief="Shows server status", description= "Shows the number of users in the server", pass_context=True)
 async def serstatus(ctx):
-    x = len(ctx.message.server.members)
+    x = "There are currently `"+str(len(ctx.message.server.members)) +"` users in the server."
     await client.send_message(ctx.message.channel, x)
 
 #--------------------------- End of Commands
