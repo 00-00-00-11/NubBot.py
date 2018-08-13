@@ -112,7 +112,7 @@ async def ptype(ctx):
 
 # ping Command
 
-@client.command(pass_context=True)
+@client.command(brief = "Calculates the ping", description = "Calculates and sends ping between bot and user", pass_context=True)
 async def ping(ctx):
     before = int(round(time.time() * 1000))
     message = await client.send_message(ctx.message.channel,"Pong!")
