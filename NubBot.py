@@ -187,7 +187,7 @@ async def avatar(context, user):
     em = Embed(
         title = eTitle,
         description = eDesc,
-        url = user.avatar_url,
+        url = user.avatar_url(),
         colour = Colour.green())
     # em.set_thumbnail(user.avatar_url)
 
@@ -288,10 +288,6 @@ async def on_message(message):
 
 
 # Default event during Bot Initiation
-
-#@client.event
-#async def on_ready():
-#    await client.change_presence(game=Game(name="Pokemon Legends"))
 
 # Magic
 
