@@ -291,7 +291,7 @@ async def on_message(message):
             await client.send_message(channel, 'Pokemon:   ' + "https://www.pokemonlegends.com/monster.php?mid="+addition + "  :wink: ")
 
 
-    if lowered_message.content.startswith("?getavatar"):
+    if lowered_message.content.startswith("!getavatar"):
             if len(message.mentions) > 0:
                 for user in lowered_message.mentions:
                     if user.avatar_url() != "":
