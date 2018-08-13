@@ -179,19 +179,25 @@ async def serstatus(ctx):
 #        User = ctx.message.author
 #    await ctx.send_message(ctx.message.channel, User.avatar_url())
 
-@client.command(pass_context=True)
-async def avatar(context, user):
-    eTitle = "{0}'s Avatar".format(user)
-    eDesc = "{0}'s rad avatar".format(user.display_name)
+#@client.command(pass_context=True)
+#async def avatar(context, user):
+#    eTitle = "{0}'s Avatar".format(user)
+#    eDesc = "{0}'s rad avatar".format(user.display_name)
 
-    em = Embed(
-        title = eTitle,
-        description = eDesc,
-        url = user.avatar_url(),
-        colour = Colour.green())
+#    em = Embed(
+#        title = eTitle,
+#        description = eDesc,
+#        url = user.avatar_url(),
+#        colour = Colour.green())
     # em.set_thumbnail(user.avatar_url)
 
-    await client.say(embed = em)
+#    await client.say(embed = em)
+
+@client.command(pass_context=True)
+async def avatar(ctx):
+    if (message.mentions.__len__()>0):
+        for user in message.mentions:
+            await client.say(user.avatar_url)
 
 
 #--------------------------- End of Commands
@@ -288,6 +294,10 @@ async def on_message(message):
 
 
 # Default event during Bot Initiation
+
+#@client.event
+#async def on_ready():
+#    await client.change_presence(game=Game(name="Pokemon Legends"))
 
 # Magic
 
