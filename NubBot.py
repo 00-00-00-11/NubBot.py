@@ -173,11 +173,25 @@ async def serstatus(ctx):
 
 # avatar Command
 
-@client.command(brief= "Shows avatar", description = "Shows a given member's avatar (default is user)", pass_context= True)
-async def avatar(ctx, User = ""):
-    if User == "":
-        User = ctx.message.author
-    await ctx.send_message(ctx.message.channel, User.avatar_url())
+#@client.command(brief= "Shows avatar", description = "Shows a given member's avatar (default is user)", pass_context= True)
+#async def avatar(ctx, User = ""):
+#    if User == "":
+#        User = ctx.message.author
+#    await ctx.send_message(ctx.message.channel, User.avatar_url())
+
+@client.command(pass_context=True)
+async def avatar(context, user)
+    eTitle = "{0}'s Avatar".format(user)
+    eDesc = "{0}'s rad avatar".format(user.display_name)
+
+    em = discord.Embed(
+        title = eTitle,
+        description = eDesc,
+        url = user.avatar_url,
+        colour = discord.Colour.green())
+    # em.set_thumbnail(user.avatar_url)
+
+    await client.say(embed = em)
 
 
 #--------------------------- End of Commands
