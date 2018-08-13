@@ -174,12 +174,10 @@ async def serstatus(ctx):
 # avatar Command
 
 @client.command(brief= "Shows avatar", description = "Shows a given member's avatar (default is user)", pass_context= True)
-async def avatar(ctx, user= message.user.ID)
-    if user!="":
-        name = check_for_id(user)
-        url = name.avatar_url()
+async def avatar(ctx, user):
+        avt = user.avatar_url()
         embed=Embed()
-        embed.set_image(url = url)
+        embed.set_image(url = avt)
         await client.send_message(ctx.message.channel, embed= embed)
 
 
