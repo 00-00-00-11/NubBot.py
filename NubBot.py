@@ -178,7 +178,7 @@ async def avatar(ctx, User = None):
 
         if User is None:
             User = ctx.message.author
-        await ctx.send_message(User.avatar_url())
+        await ctx.send_message(ctx.message.channel, User.avatar_url())
 
 
 #--------------------------- End of Commands
