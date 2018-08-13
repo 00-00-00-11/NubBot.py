@@ -197,7 +197,7 @@ async def serstatus(ctx):
 async def avatar(ctx):
     if (ctx.message.mentions.__len__()>0):
         for user in ctx.message.mentions:
-            await client.say(user.avatar_url)
+            await client.say(user.avatar_url())
 
 
 #--------------------------- End of Commands
