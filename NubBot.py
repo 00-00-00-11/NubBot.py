@@ -171,13 +171,13 @@ async def serstatus(ctx):
     await client.send_message(ctx.message.channel, x)
 
 
-# pokemon Command
+# mon Command
 
-pokemonlist = ["caterpie","charmander","bulbasaur","squirtle"]
 @client.command(pass_context=True)
-async def pokemon(context):
+async def mon(context):
+    pokemonlist = ["caterpie","charmander","bulbasaur","squirtle"]
     poke = random.choice(pokemonlist)
-    await client.send_message(ctx.message.channel, "Congratulations " + context.message.author.mention+ "! You caught a " + poke)
+    await client.send_message(context.message.channel, "Congratulations " + context.message.author.mention+ "! You caught a " + poke)
     
 
 # avatar Command
