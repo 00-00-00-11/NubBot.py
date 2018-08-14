@@ -181,7 +181,7 @@ async def mon(context):
     
 catch_able = ""
 for i in pokemonlist:
-    catchable+=i+"\n"
+    catch_able+=i+"\n"
     
 @client.command(brief = "List of catchable pokemon", description = "Check the list of available catchable pokemon in the bot.", pass_context=True)
 async def catchable(ctx):
