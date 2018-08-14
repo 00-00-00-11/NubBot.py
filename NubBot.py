@@ -181,13 +181,13 @@ async def mon(context):
     
 catch_able = ""
 for i in pokemonlist:
-    catch_able+=i+"\n"
+    catch_able+="-"+i+"\n"
     
 # catchable Command    
 
 @client.command(brief = "List of catchable pokemon", description = "Check the list of available catchable pokemon in the bot.", pass_context=True)
 async def catchable(ctx):
-    em = Embed(title = "Catchable Pokemon", description = "Here is the list of catchable Pokemon in Nub bot\n\n", colour = Colour())
+    em = Embed(title = "Catchable Pokemon", description = "Here is the list of catchable Pokemon in Nub bot\n\n"+catch_able, colour = 0x5af48b)
     await client.send_message(ctx.message.channel, embed = em)
         
     
