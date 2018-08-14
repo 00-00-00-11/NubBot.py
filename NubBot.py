@@ -147,7 +147,7 @@ async def invite(ctx, maxuses = 3):
         await client.send_message(ctx.message.channel, "\nThe Invite link can be used maximum ``" + str(maxuses) + "`` time(s). You can use ``?invite <max_uses>`` to create a new invite link. Default 3.")
 
  
-# pokemon Command
+# strategy Command
 
 @client.command(name='strategy',
                 description="Sends the image of Pokemon with their best strategy to use",
@@ -170,6 +170,15 @@ async def serstatus(ctx):
     x = "There are currently `"+str(len(ctx.message.server.members)) +"` users in the server. Do `?ping` to get the server ping."
     await client.send_message(ctx.message.channel, x)
 
+
+# pokemon Command
+
+pokemonlist = ["caterpie","charmander","bulbasaur","squirtle"]
+@client.command(pass_context=True)
+async def pokemon(ctx):
+    poke = random.choice(pokemonlist)
+    await client.send_message(ctx.message.channel, "Congratulations {}! You caught a {}.".format(ctx.message.author.mention, poke)
+    
 
 # avatar Command
 
@@ -289,17 +298,6 @@ async def on_message(message):
             if "[mid]" in li[i]:
                 addition = li[i][5:12]
             await client.send_message(channel, 'Pokemon:   ' + "https://www.pokemonlegends.com/monster.php?mid="+addition + "  :wink: ")
-
-
-#    if lowered_message.content.startswith("!getavatar"):
-#            if len(message.mentions) > 0:
-#                for user in lowered_message.mentions:
-#                    if user.avatar_url() != "":
-#                        client.send_message(message.channel, "<@" + user.id + ">'s avatar is " + user.avatar_url())
-#                    else:
-#                        client.send_message(message.channel, user.name + " doesn't have an avatar.")
-#            else:
-#                client.send_message(message.channel, message.author.mention() + " You need to mention the users you want to get avatars from.")
 
 
     await client.process_commands(message)
