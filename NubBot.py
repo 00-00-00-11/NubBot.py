@@ -173,17 +173,20 @@ async def serstatus(ctx):
 
 # mon Command
 
-pokemonlist = ["Caterpie","Charmander","Bulbasaur","Squirtle"]
+pokemonlist = ["Caterpie","Charmander","Bulbasaur","Squirtle","Eevee","Pikachu"]
 @client.command(brief = "Catch random Pokemon", description = "Catch random pokemon. Type `?catchable` to check out the list of catchable pokemon", pass_context=True)
 async def mon(context):
     poke = random.choice(pokemonlist)
     await client.send_message(context.message.channel, "Congratulations " + context.message.author.mention+ "! You caught a " + poke)
     
-@client.command(brief = "List of catchable pokemon", description = "Check the list of available catchable pokemon in the bot.")
-async def catchable():
-    for i in pokemonlist:
-        await client.say(i)        
+catch_able = ""
+for i in pokemonlist:
+    catchable+=i+"\n"
     
+@client.command(brief = "List of catchable pokemon", description = "Check the list of available catchable pokemon in the bot.", pass_context=True)
+async def catchable(ctx):
+    await client.say(catch_able)
+        
     
     
 # avatar Command
