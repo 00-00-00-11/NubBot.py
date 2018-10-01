@@ -314,7 +314,7 @@ async def on_message(message):
             await client.send_message(channel, 'Pokemon:   ' + "https://www.pokemonlegends.com/monster.php?mid="+addition + "  :wink: ")
 
     if message.startswith('.direct'):
-        content = re.sub(r'^\W*\w+\W*', '', message.content)
+        content = "Hi" #re.sub(r'^\W*\w+\W*', '', message.content)
         await client.send_message(client.get_user_info(id), content)
 
     await client.process_commands(message)
