@@ -356,4 +356,5 @@ async def on_member_join(member):
 
 client.loop.create_task(list_servers())
 client.loop.create_task(change_status())
+client.loop.create_task(on_member_join())
 client.run(TOKEN)
