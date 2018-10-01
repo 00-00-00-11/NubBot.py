@@ -314,6 +314,12 @@ async def on_message(message):
             await client.send_message(channel, 'Pokemon:   ' + "https://www.pokemonlegends.com/monster.php?mid="+addition + "  :wink: ")
 
     await client.process_commands(message)
+    
+
+async def on_member_join(member):
+    await client.send_message(member, "hello")
+    await client.process_commands(member)
+
 
 
 # Default event during Bot Initiation
@@ -347,14 +353,10 @@ async def list_servers():
         for server in client.servers:
             print(server.name)
         await asyncio.sleep(600)
-        
-async def on_member_join(member):
-    await client.send_message(member, "hello")
     
     
 # Run Bot
 
 client.loop.create_task(list_servers())
 client.loop.create_task(change_status())
-client.loop.create_task(on_member_join(member))
 client.run(TOKEN)
