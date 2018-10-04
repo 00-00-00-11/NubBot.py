@@ -318,10 +318,6 @@ async def on_message(message):
     
 # Default event during Bot Initiation
 
-#@client.event
-#async def on_ready():
-#    await client.change_presence(game=Game(name="Pokemon Legends"))
-
 # Magic
 
 #Statuses
