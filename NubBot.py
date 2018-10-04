@@ -315,13 +315,7 @@ async def on_message(message):
 
     await client.process_commands(message)
     
-
-async def on_member_join(member):
-    await client.send_message(member, "hello")
-    await client.process_commands(member)
-
-
-
+    
 # Default event during Bot Initiation
 
 #@client.event
