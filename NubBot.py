@@ -187,7 +187,7 @@ for i in pokemonlist:
 
 @client.command(brief = "List of catchable pokemon", description = "Check the list of available catchable pokemon in the bot.", pass_context=True)
 async def catchable(ctx):
-    em = Embed(title = "Catchable Pokemon", description = "Here is the list of catchable Pokemon in Nub bot\n\n", colour = 0x5af48b)
+    em = Embed(title = "Catchable Pokemon", description = "Here is the list of catchable Pokemon in G bot\n\n", colour = 0x5af48b)
     em.add_field(name = "Gen 1", value = catch_able)
     em.set_footer(text  = "Only a few pokemon available right now. More coming soon!")
     await client.send_message(ctx.message.channel, embed = em)
