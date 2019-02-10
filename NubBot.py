@@ -312,6 +312,7 @@ async def on_message(message):
             if "[mid]" in li[i]:
                 addition = li[i][5:12]
             await client.send_message(channel, 'Pokemon:   ' + "https://www.pokemonlegends.com/monster.php?mid="+addition + "  :wink: ")
+            break
 
     await client.process_commands(message)
     
